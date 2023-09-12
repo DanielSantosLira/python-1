@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO, send 
 
 app = Flask(__name__)
-app.config["SECRET"] = "ajuianfa78fh9f78shfs768fgs7f6"
+#app.config["SECRET"] = "ajuianfa78fh9f78shfs768fgs7f6"
 app.config["DEBUG"] = True
 socketio = SocketIO(app, cors_aLLowed_origins="*")
 
