@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.1/socket.io.js" integrity="sha512-Z6C1p1NIexPj5MsVUunW4pg7uMX6/TT3CUVldmjXx2kpip1eZcrAnxIusDxyFIikyM9A61zOVNgvLr/TGudOQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js" integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Hashzap</title>
     <style>
         * {
@@ -83,9 +82,14 @@
     </div>
 
     <div id="chat-container">
+<<<<<<< HEAD:aula4-python/templete/index.html
         <p>Bem-vindo ao Hashmap!</p>
+=======
+        <div id="chat-container">
+        <p>Bem-vindo ao Projeto integrador!</p>
+>>>>>>> ca1498ae78292ea199aec2ae3caed3f9db6b044c:aula4-python/template/index.html
     </div>
-
+        
     <div id="input-container">
         <input type="text" id="usuario" placeholder="Usuario" required>
         <div style="width: 10px;"></div>
@@ -95,7 +99,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            var socket = io("localhost:500");
+            var socket = io("localhost:5000");
             socket.on("connect", function() {
                 console.log("conectou");
             });
@@ -103,8 +107,8 @@
             socket.on("message", function(data) {
                 console.log("enviou mensagem");
                 $("#chat-container").append($('<p>').text(data));
-                  //Scroll to the bottom of the chat container
-                  $("#chat-container").scrollTop($("#chat-container")[0].scrollHeight);
+                //Scroll to the bottom of the chat container
+                //$("#chat-container").scrollTop($("#chat-container")[0].scrollHeight);
             });
 
             $("#botao").on('click', function() {
@@ -112,15 +116,16 @@
                 socket.send($('#usuario').val() + ": " + $('#mensagem').val());
                 $('#mensagem').val('');
             });
-              
+             /*  
              $("#mensagem").on('keypress', function() {
                 if (event.key === "Enter") {
                     console.log("deu enter");
                     socket.send($('#usuario').val() + ": " + $('#mensagem').val());
                     $('#mensagem').val("");
                 }
+             
             });
-        
+        */ 
         });
     </script>
 </body>
