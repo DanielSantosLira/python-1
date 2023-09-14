@@ -83,8 +83,8 @@
     </div>
 
     <div id="chat-container">
-        <div id="chat-container">
         <p>Bem-vindo ao Hashmap!</p>
+        
     </div>
 
     <div id="input-container">
@@ -105,7 +105,7 @@
                 console.log("enviou mensagem");
                 $("#chat-container").append($('<p>').text(data));
                   //Scroll to the bottom of the chat container
-                ("#chat-container").scrollTop($("#chat-container")[0].scrollHeight);
+                $("#chat-container").scrollTop($("#chat-container")[0].scrollHeight);
             });
 
             $("#botao").on('click', function() {
