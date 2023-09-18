@@ -11,13 +11,13 @@ socketio = SocketIO(app, cors_aLLowed_origins="")
 
 def gerenciar_mensagem(mensagem):
     print(f"Mensagem: {mensagem}")
-    send(mensagem, send=True)
+    send(mensagem, broadcast=True)
 # criar a nossa 1ª página = 1ª rota
 @app.route("/")
 def home():
     return  render_template("index.html")
 # roda o nosso
 if __name__ == "__main__":  
-    socketio.run(app, host="192.168.56.1")
+    socketio.run(app, host="192.168.0.13")
 
 # websocket -. tunel
