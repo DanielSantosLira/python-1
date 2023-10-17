@@ -18,4 +18,4 @@ def home():
     return  render_template("index.html")
 # roda o nosso
 if __name__ == "__main__":  
-    socketio.run(app, host="192.168.0.138")
+    socketio.run(app, host="192.168.15.1")
